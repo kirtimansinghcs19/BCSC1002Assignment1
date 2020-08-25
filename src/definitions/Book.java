@@ -17,10 +17,6 @@ public class Book {
         this.isbnNumber = "";
     }
 
-    public Book(String bookName, String isbnNumber) {
-        this.authorName = "";
-    }
-
     public Book(String bookName, String authorName, String isbnNumber) {
         this.authorName = authorName;
         this.bookName = bookName;
@@ -49,5 +45,9 @@ public class Book {
 
     private void setIsbnNumber(String isbnNumber) {
         this.isbnNumber = isbnNumber;
+    }
+
+    public String toString() {
+        return String.format( "Book Name: %s, Author Name: %s, Book ISBN NUMBER: %s", getBookName(), getAuthorName(), getIsbnNumber() );
     }
 }
