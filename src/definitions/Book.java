@@ -13,7 +13,7 @@ public class Book {
     private String authorName;
     private String isbnNumber;
 
-    public Book() {
+    public Book(String s) {
         this.bookName = "";
         this.authorName = "";
         this.isbnNumber = "";
