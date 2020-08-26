@@ -45,7 +45,7 @@ public class Book {
         return isbnNumber;
     }
 
-    private void setIsbnNumber(String isbnNumber) {
+    public void setIsbnNumber(String isbnNumber) {
         this.isbnNumber = isbnNumber;
     }
 

@@ -6,9 +6,17 @@
  * */
 package execution;
 
+import java.util.Scanner;
+
 public class FrontDesk {
+    private static final int ISSUE_BOOK = 1;
+    private static final int RETURN_BOOK = 2;
+    private static final int LIST_INVENTORY = 3;
+    private static final int EXIT = 4;
+
     public static void main(String[] args) {
-        int studentInput = 4;
+        Scanner input = new Scanner( System.in );
+        int studentInput;
         do {
             System.out.println( "-=-=--=-=-\"Welcome To The Front Desk\"-=-=--=-=-" );
             System.out.println( "How may I help you today?" );
@@ -17,6 +25,20 @@ public class FrontDesk {
             System.out.println( "3. Show me all my issues books." );
             System.out.println( "4. Exit: " );
             System.out.println( "Enter you choice (1..4): " );
+            studentInput = input.nextInt();
+            switch (studentInput) {
+                case ISSUE_BOOK:
+                    break;
+                case RETURN_BOOK:
+                    break;
+                case LIST_INVENTORY:
+                    break;
+                case EXIT:
+                    break;
+                default:
+                    System.out.println( "WRONG CHOICE...." );
+            }
         } while (studentInput != 4);
+        input.close();
     }
 }
