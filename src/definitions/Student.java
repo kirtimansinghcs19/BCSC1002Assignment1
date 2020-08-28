@@ -15,7 +15,7 @@ public class Student {
     private String lastName;
     private long rollNumber;
     private int numberBookIssued;
-
+    Book book = new Book();
     public Student(String firstName, String lastName, long rollNumber, int numberBookIssued, Book[] books) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -27,7 +27,11 @@ public class Student {
     public Student() {
         this.books = new Book[10];
         for (int i = 0; i < books.length; i++) {
-            books[i] = new Book( "Books " + (i + 1) );
+            String a = "sd";
+            String b = "dfdf";
+            String c = "sdfd";
+            // books[i] = new Book(a, b, c);
+            books[i] = new Book( a );
         }
     }
 
@@ -86,5 +90,32 @@ public class Student {
     @Override
     public String toString() {
         return Arrays.toString( books ) + String.format( "Book Name: %s, Author Name: %s, Book ISBN NUMBER: %s", getName(), getRollNumber(), getNumberBookIssued() );
+    }
+
+    public void issueNewBook(String bookName, int rollNumber) {
+        boolean available = false;
+        int c = 0;
+        String b = book.getBookName();
+        //  for (int i = 0; i < books.length; i++) {
+        if (b.equals( bookName )) {
+            available = true;
+
+        }
+        // else
+        //         available=false;
+        //   }
+        if (available) {
+            System.out.println( "Congratulation, Book is issued to you." );
+        } else {
+            System.out.println( b );
+            System.out.println( bookName );
+            System.out.println( "Sorry ,Someone already issued the book" );
+        }
+    }
+
+    public void listInventory() {
+        for (Book book : books) {
+            System.out.println( book );
+        }
     }
 }
