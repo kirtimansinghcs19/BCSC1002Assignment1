@@ -1,7 +1,7 @@
 /*  Created by IntelliJ IDEA.
- *  User: Divyansh Bhardwaj (dbc2201)
- *  Date: 21/08/20
- *  Time: 3:49 PM
+ *  User: Kirtiman Singh
+ *  Date: 26/08/20
+ *  Time: 3:48 PM
  *  File Name : Book.java
  * */
 package definitions;
@@ -14,13 +14,6 @@ public class Book {
     private String isbnNumber;
 
     public Book() {
-
-    }
-
-    public Book(String bookName) {
-        this.bookName = bookName;
-        this.authorName = "Dont know";
-        this.isbnNumber = "okk";
     }
 
     public Book(String bookName, String authorName, String ibnNumber) {
@@ -54,7 +47,7 @@ public class Book {
     }
 
     public String toString() {
-        return String.format( "Book Name: %s, Author Name: %s, Book ISBN NUMBER: %s", getBookName(), getAuthorName(), getIsbnNumber() );
+        return String.format( "Book Name: %s, Author Name: %s, Book ISBN NUMBER: %s  .", getBookName(), getAuthorName(), getIsbnNumber() );
     }
 
     @Override
